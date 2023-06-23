@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+    rel="stylesheet" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/nosotros.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="icon" href="img/lepuslogocopia.png">
+  <title><%= title%></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- HEADER -->
+  <!-- Primer nav -->
+  <div class="ingreso">
+    <nav dir="ltr">
+      <p>Si trabajas en Lepus Ingresa <a href="login.html">Aquí</a></p>
+    </nav>
+  </div>
+
+  <!-- LOGO -->
+  <nav class="img1">
+    <label for="" class="brand">
+      <a href="/"><img src="img/lepuslogo.jpg" alt=""></a>
+      <h1 class="display-1 my-5 text text-uppercase fw-bold">LEPUS</h1>
+    </label>
+  </nav>
+
+  <!-- MENU -->
+
+  <%- include('partials/navigation') %>
+
+  <!-- TITULO NOSOTROS -->
+  <section id="nosotros" class="nosotros">
+    <div class="contenido-seccion" dir="ltr">
+      <h2>NOSOTROS</h2>
+      <!-- Información -->
+      <p>Somos una página web que los ayudará a implementar marketing digital para sus empresas o negocios para mejorar
+        las ventas de sus productos y/o darse a conocer en el mercado ya sea diseñandoles un logo, realizando una
+        campaña publicitaria, asesorandolos e ideando alguna estrategia.</p>
+      <div class="fila">
+        <!-- datos personales -->
+        <div class="col" dir="ltr">
+          <h3>DATOS PERSONALES</h3>
+          <ul>
+            <li>
+              <strong>Nombre</strong>
+              <span>Juan Andres David Ochoa</span>
+            </li>
+            <li>
+              <strong>Identificación</strong>
+              <span>1001482088</span>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <span>davjdandreasochu2013@gmail.com</span>
+            </li>
+            <li>
+              <strong>Dirección</strong>
+              <span>Sena Itagüí</span>
+            </li>
+            <li>
+              <strong>Nivel de Formación</strong>
+              <span>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Conocimientos -->
+        <div class="col" dir="ltr">
+          <h4>CONOCIMIENTOS</h4>
+          <ul>
+            <div class="contenedor-conocimiento">
+              <li>
+                <div class="Conocimiento">
+                  <span>Diseño de páginas web (CSS)</span>
+                </div>
+              </li>
+              <li>
+                <div class="Conocimiento">
+                  <span>Manejo de Base de Batos</span>
+                </div>
+              </li>
+            </div>
+        </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION SKILLS -->
+  <section class="skills" id="skills" dir="ltr">
+    <div class="contenido-section">
+      <div class="fila">
+        <!-- technical skills -->
+        <div class="col">
+          <h3>Technical Skills</h3>
+          <div class="skill">
+            <span>Javascript</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>20%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>50%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PROFESSIONAL SKILLS -->
+        <div class="col">
+          <h3>Professional Skills</h3>
+          <div class="skill">
+            <span>Trabajo en Equipo</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>30%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Analisis</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>60%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Creatividad</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Dedicacion</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>65%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PAGINA -->
+
+  <footer class="w-100 d-flex align-items justify-content-center d-flex-wrap">
+    <p class="fs-5 px-3 pt-3">LEPUS &copy; Todos los derechos reservados 2023</p>
+    <div id="icons">
+      <a href="#"><i class="bi bi-whatsapp"></i></a>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

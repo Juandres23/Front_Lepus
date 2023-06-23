@@ -1,0 +1,68 @@
+/* slider de imagenes */
+.carousel-inner {
+    max-height: 29rem;
+  }
+  
+  /* 
+  <!-- breve descripcion --> */
+  
+  @media (max-width: 768px) {
+    #intro {
+      width: 90% important;
+    }
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    background: #4c2882;
+    min-height: 100px;
+  }
+  
+  footer p {
+    color: #00ffff;
+    text-align: center;
+  }
+  
+  #icons i {
+    font-size: 26px;
+    padding: 0 8px;
+    color: #f8f8ff;
+  }
+  /* <!-- HEADER --> */
+  /* <!-- Primer nav --> */
+  .ingreso{
+    height: 40px;
+    background-color: #008cff;
+    color: #ffffff;
+  }
+  .ingreso p a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .ingreso a:hover{
+  color: #00ffff;
+  text-decoration: underline;
+  }
+  /* LOGO */
+  .brand img {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 290px;
+  }
+  body{
+    background: #4c2882;
+    color: #00ffff;
+    font-family: 'Graduate';
+  }
+  h1 {
+    font-family: 'Graduate';
+  }
+  .img1 {
+    text-align: center;
+  }
+  
+  
