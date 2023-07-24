@@ -1,13 +1,22 @@
+body {
+  background: #832dce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   .form-register {
-    position: relative;
-    left: 500px;
-    width: 400px;
-    background: #436ec0;
+    width: 90%;
+    max-width: 400px;
+    background: #472ff6;
     padding: 30px;
     margin-top: 100px;
     border-radius: 4px;
@@ -20,7 +29,7 @@
   }
   .controls {
     width: 100%;
-    background: #fff;
+    background: #100076;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -29,6 +38,85 @@
     font-size: 18px;
     color: #00995e;
   }
+
+  .controls select {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Graduate';
+    font-size: 18px;
+    color: #00995e;
+  }
+
+  /* Estilos del modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 200%;
+    height: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+
+.modal-content h2 {
+  font-size: 22px;
+  color: #333333;
+  margin-bottom: 10px;
+  }
+  
+.modal-content  p {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 10px;
+  }
+
+.close {
+  background-color: #00b3ff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.close:hover{
+  background-color: #0095c7;
+}
+.close:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+    padding: 10px;
+  }
+  }
+
+/* BOTON REGISTRO */
   .form-register p {
     height: 40px;
     text-align: center;
@@ -36,7 +124,8 @@
     line-height: 40px;
   }
   .form-register a {
-    color: #000000;
+    text-align: center;
+    color: #00f777;
     text-decoration: none;
   }
   .form-register a:hover {
@@ -46,10 +135,10 @@
   button {
     width: 100%;
     border-radius: 40px;
-    background: #6300a5;
+    background: #00b3ff;
     border: none;
     padding: 12px;
-    color: #34e0f7;
+    color: #ffffff;
     margin: 16px 0;
     font-size: 16px;
     font-weight: 600;

@@ -5,8 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <%- include('partials/rutasRegistro.ejs') %>
+
   <link rel="stylesheet" href="css/registro.css" />
-  <link rel="icon" href="img/lepuslogocopia.png" />
+  <link rel="icon" href="img/lepuslogo.jpg" />
   <title><%= title%></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +19,52 @@
 <body>
   <section class="form-register">
     <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingresa su(s) Nombre(s)" required/>
+    <input class="controls" type="id" name="id" id="i" placeholder="Ingrese su Cedula" required/>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su(s) Nombre(s)" required/>
     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingresar Apellidos" required/>
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required/>
+    <input class="controls" type="telefono" name="telefono" id="telefono" placeholder="Ingrese su Numero Telefónico" required/>
+    <input class="controls" type="direccion" name="direccion" id="direccion" placeholder="Ingrese su direccion" required/>
     <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required/>
-    <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
-    <a href="login.html"><button>Registrar</button></a>
+    <p>Ingrese su fecha de nacimiento:</p>
+    <input class="controls" type="date" name="fecha" id="fecha" required/>
+    <label for="rol">Selecciona tu rol:</label>
+    <select id="rol" name="rol" required>
+        <option value="">Seleccione una opción</option>
+        <option value="administrador">Administrador</option>
+        <option value="usuario">Cliente</option>
+        <option value="invitado">Empresa</option>
+    </select>
+
+    <p>Estoy de acuerdo con <a href="#" id="termsLink">Terminos y condiciones</a></p>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Términos y condiciones</h2>
+        <br>
+        <p> Antes de proceder, por favor lee y acepta nuestros términos y condiciones. Al utilizar nuestros servicios, aceptas estar legalmente vinculado(a) por estos términos. Si no estás de acuerdo, te pedimos que no utilices nuestra plataforma.
+          Recuerda siempre hacer un uso adecuado de nuestros servicios y respetar los derechos de otros usuarios. Protegemos tu privacidad y tus datos personales de acuerdo con nuestra Política de Privacidad.</p>
+        <br>
+        <button class="close">Aceptar y Cerrar</button>
+
+         <!-- Otro contenido del modal aquí -->
+      </div>
+    </div>
+    <br>
+    <a href="login"><button>Registrar</button></a>
+    <form action="generatePdf" method="post">
+      <input type="hidden" name="datos">
+      <label for="formato"></label>
+      <button type="submit">Generar Reporte en PDF</button></form>
+    </form>
   </section>
+
+ 
 </body>
 
+<!-- Script para la ventana modal -->
+<script src="./js/registromodal.js"></script>
+
+<!-- Script para el PDF -->
+<script src="./js/registrogenerador"></script>
 </html>

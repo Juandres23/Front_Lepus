@@ -1,20 +1,4 @@
 /* <!-- HEADER --> */
-/* <!-- Primer nav --> */
-.ingreso{
-    height: 40px;
-    background-color: #008cff;
-    color: #ffffff;
-  }
-  .ingreso p a{
-    font-family: 'Graduate';
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  .ingreso a:hover{
-  color: #00ffff;
-  text-decoration: underline;
-  }
   /* LOGO */
   .brand img {
     display: flex;
@@ -23,7 +7,7 @@
     height: 290px;
   }
   body{
-    background: #4c2882;
+    background: #1f0042;
     color: #00ffff;
     font-family: 'Graduate';
   }
@@ -125,12 +109,21 @@
   footer {
     background: #4c2882;
     min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   footer p {
     color: #00ffff;
     text-align: center;
-    font-family: 'Graduate';
+    margin: 0;
+  }
+
+  #icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #icons i {

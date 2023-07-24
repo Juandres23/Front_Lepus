@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" dir="rtl">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -10,25 +9,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
     rel="stylesheet" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
     crossorigin="anonymous">
+  <script src="controllers/nosotros.js"></script>
   <link rel="stylesheet" href="css/nosotros.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="icon" href="img/lepuslogocopia.png">
+  <link rel="icon" href="img/lepuslogo.jpg">
   <title><%= title%></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 </head>
 
-
+<%- include('partials/navbar') %>
 <body>
   <!-- HEADER -->
-  <!-- Primer nav -->
-  <div class="ingreso">
-    <nav dir="ltr">
-      <p>Si trabajas en Lepus Ingresa <a href="login.html">Aquí</a></p>
-    </nav>
-  </div>
-
   <!-- LOGO -->
   <nav class="img1">
     <label for="" class="brand">
@@ -108,7 +101,7 @@
           <div class="skill">
             <span>Javascript</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>20%</span>
               </div>
             </div>
@@ -116,7 +109,7 @@
           <div class="skill">
             <span>HTML & CSS</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>50%</span>
               </div>
             </div>
@@ -128,7 +121,7 @@
           <div class="skill">
             <span>Trabajo en Equipo</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>30%</span>
               </div>
             </div>
@@ -136,7 +129,7 @@
           <div class="skill">
             <span>Analisis</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>60%</span>
               </div>
             </div>
@@ -144,7 +137,7 @@
           <div class="skill">
             <span>Creatividad</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>80%</span>
               </div>
             </div>
@@ -152,7 +145,7 @@
           <div class="skill">
             <span>Dedicacion</span>
             <div class="barra-skill">
-              <div class="progreso">
+              <div class="progreso javascript">
                 <span>65%</span>
               </div>
             </div>
@@ -167,12 +160,10 @@
   <footer class="w-100 d-flex align-items justify-content-center d-flex-wrap">
     <p class="fs-5 px-3 pt-3">LEPUS &copy; Todos los derechos reservados 2023</p>
     <div id="icons">
-      <a href="#"><i class="bi bi-whatsapp"></i></a>
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
-
+        <a href="https://api.whatsapp.com/send?phone=3045441669"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://instagram.com/lepus906?igshid=NjIwNzIyMDk2Mg=="><i class="bi bi-instagram"></i></a>
     </div>
-  </footer>
+</footer>
 
 
 </body>

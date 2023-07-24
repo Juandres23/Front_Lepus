@@ -1,0 +1,37 @@
+/* Estilos para el navbar */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  .navbar-brand {
+    font-size: 20px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Peso de la fuente */
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 10px; /* Espaciado derecho entre los enlaces */
+  }
+  
+  /* Estilos para el botón de hamburguesa en dispositivos móviles */
+  .navbar-toggler {
+    border: none; /* Quita el borde */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #333; /* Color del icono */
+  }
+  
+  /* Estilos para que el navbar sea responsive */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column; /* Cambia la dirección a columna en dispositivos pequeños */
+      align-items: flex-start; /* Alinea los enlaces a la izquierda */
+    }
+  
+    .navbar-nav .nav-link {
+      margin-right: 0; /* Quita el espaciado derecho en dispositivos pequeños */
+      margin-bottom: 10px; /* Espaciado inferior entre los enlaces */
+    }
+  }
+  

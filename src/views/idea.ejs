@@ -19,15 +19,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 </head>
 
+<%- include('partials/navbar') %>
+
 <body>
   <!-- HEADER -->
-    <!-- Primer nav -->
-    <div class="ingreso">
-      <nav dir="ltr">
-        <p>Si trabajas en Lepus Ingresa <a href="login.html">Aquí</a></p>
-      </nav>
-    </div>
-    
   <!-- LOGO -->
   <nav class="img1">
     <label for="" class="brand">
@@ -40,24 +35,43 @@
 
   <%- include('partials/navigation') %>
 
+ <!-- TIPOS Y PRECIOS -->
 
-  <!-- SUBIR ARCHIVOS -->
-  <div class="mb-3">
-    <label for="formFileLg" class="form-label">Large file input example</label>
-    <input class="form-control form-control-lg" id="formFileLg" type="file" />
+  <div class="campaign-section" dir="ltr" >
+    <h2>Tipos de Campañas de Publicidad y Precios</h2>
+    <div class="campaign-item">
+      <h3>Campaña de Búsqueda</h3>
+      <p>Descripción: La campaña de búsqueda consiste en mostrar anuncios en los resultados de búsqueda de motores como Google. Estos anuncios se activan cuando los usuarios buscan palabras clave relacionadas con el producto o servicio ofrecido.</p>
+      <p>Precio: $100</p>
+    </div>
+    <div class="campaign-item">
+      <h3>Campaña de Display</h3>
+      <p>Descripción: La campaña de display se enfoca en mostrar anuncios gráficos o de video en sitios web, blogs y aplicaciones. Estos anuncios pueden aparecer en forma de banners, anuncios emergentes, anuncios nativos, entre otros formatos.</p>
+      <p>Precio: $150</p>
+    </div>
+    <div class="campaign-item">
+      <h3>Campaña de Redes Sociales</h3>
+      <p>Descripción: La campaña de redes sociales se centra en promocionar productos o servicios en plataformas de redes sociales populares como Facebook, Instagram, Twitter, LinkedIn, etc. Estos anuncios pueden ser dirigidos a audiencias específicas según intereses, ubicación, demografía, etc.</p>
+      <p>Precio: $200</p>
+    </div>
+    <div class="campaign-item">
+      <h3>Campaña de Video</h3>
+      <p>Descripción: La campaña de video se basa en la creación y promoción de anuncios de video en plataformas como YouTube. Estos anuncios pueden ser anuncios pre-roll, anuncios en el medio del video o anuncios de visualización en la barra lateral.</p>
+      <p>Precio: $250</p>
+    </div>
   </div>
+
+
+
   <!-- PIE DE PAGINA -->
 
   <footer class="w-100 d-flex align-items justify-content-center d-flex-wrap">
-    <p class="fs-5 px-3 pt-3">
-      LEPUS &copy; Todos los derechos reservados 2023
-    </p>
+    <p class="fs-5 px-3 pt-3">LEPUS &copy; Todos los derechos reservados 2023</p>
     <div id="icons">
-      <a href="#"><i class="bi bi-whatsapp"></i></a>
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=3045441669"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://instagram.com/lepus906?igshid=NjIwNzIyMDk2Mg=="><i class="bi bi-instagram"></i></a>
     </div>
-  </footer>
+</footer>
 </body>
 
 </html>

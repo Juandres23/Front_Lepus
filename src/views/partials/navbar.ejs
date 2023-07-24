@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="container">
+      <!-- Logo y título -->
+      <a class="navbar-brand" href="#">
+        <img src="ruta_a_tu_imagen_de_perfil" width="30" height="30" class="d-inline-block align-top" alt="">
+        LEPUS
+      </a>
+  
+      <!-- Botón  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Opciones de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="perfil">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- JAVASCRIPT ver perfil -->
+  <script>
+    const verPerfilLink = document.getElementById('perfil');
+    verPerfilLink.addEventListener('click', () => {
+      window.location.href = '/perfil';
+    });
+  </script>
+
+
+<!-- JAVASCRIPT cerrar sesión -->
+<script>
+    const cerrarSesionLink = document.getElementById('cerrar sesion');
+    cerrarSesionLink.addEventListener('click', () => {
+      fetch('/logout', {
+        method: 'POST' // o 'GET' según cómo esté configurado tu backend
+      })
+        .then(() => {
+          window.location.href = '/login';
+        })
+        .catch(error => {
+          console.error('Error al cerrar sesión:', error);
+        });
+    });
+  </script>
+  
+
+  <link rel="stylesheet" href="css/navbar.css" />

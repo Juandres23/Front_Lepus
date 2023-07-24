@@ -1,20 +1,4 @@
 /* <!-- HEADER --> */
-/* <!-- Primer nav --> */
-.ingreso{
-    height: 40px;
-    background-color: #008cff;
-    color: #ffffff;
-  }
-  .ingreso p a{
-    font-family: 'Graduate';
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  .ingreso a:hover{
-  color: #00ffff;
-  text-decoration: underline;
-  }
   /* LOGO */
   .brand img {
     display: flex;
@@ -23,7 +7,7 @@
     height: 290px;
   }
   body{
-    background: #4c2882;
+    background: #1f0042;
     color: #00ffff;
     font-family: 'Graduate';
   }
@@ -51,7 +35,9 @@
     font: 18px;
     text-align: center;
     line-height: 22px;
-    margin-bottom: 20px; /* <!-- datos personales --> */
+    margin-bottom: 20px; 
+    
+    /* <!-- datos personales --> */
   }
   .nosotros .fila {
     display: flex;
@@ -87,6 +73,10 @@
     margin-bottom: 25px;
     text-align: left;
   }
+  .nosotros .fila .col .contenedor-conocimiento{
+    display: flex;
+    flex-wrap: wrap;
+  }
   .nosotros .fila .col .contenedor-conocimiento .conocimiento {
     width: 100px;
     height: 100px;
@@ -95,7 +85,7 @@
     margin: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;   
     justify-content: center;
     transition: 0.3s;
   } /* <!-- SECCION SKILLS --> */
@@ -151,27 +141,84 @@
     right: -15px;
     font-size: 14px;
   }
-  /* FOOTER */
-  footer {
-    background: #4c2882;
-    min-height: 100px;
+  .skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
   }
-  footer p {
-    color: #00ffff;
-    text-align: center;
+  @keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 20%;}
   }
-  #icons i {
-    font-size: 26px;
-    padding: 0 8px;
-    color: #f8f8ff;
+
+  .skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
   }
-  .brand img {
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    height: 290px;
+  @keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 50%;}
   }
-  .img1 {
-    text-align: center;
+
+  .skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
   }
+  @keyframes trabajo{
+    0%{width: 0%;}
+    100%{width: 30%;}
+  }
+
+  .skills .skill .analisis{
+    width: 0%;
+    animation: 2s analisis forwards;
+  }
+  @keyframes analisis{
+    0%{width: 0%;}
+    100%{width: 60%;}
+  }
+
+  .skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+  }
+  @keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 80%;}
+  }
+
+  .skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+  }
+  @keyframes dedicacion{
+    0%{width: 0%;}
+    100%{width: 65%;}
+  }
+
+ /* FOOTER */
   
+ footer {
+  background: #4c2882;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #00ffff;
+  text-align: center;
+  margin: 0;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icons i {
+  font-size: 26px;
+  padding: 0 8px;
+  color: #f8f8ff;
+}

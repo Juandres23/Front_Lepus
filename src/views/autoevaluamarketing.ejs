@@ -5,34 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
-      rel="stylesheet"
-      integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/autoevaluamarketing.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <link rel="icon" href="img/lepuslogo.jpg" />
-    <title><%= title%></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-  </head>
+    <%- include('partials/rutasEvaluacion.ejs') %>
 
+  </head>
+  <%- include('partials/navbar') %>
   <body>
-    <!-- HEADER -->
-    <!-- Primer nav -->
-    <div class="ingreso">
-      <nav dir="ltr">
-        <p>Si trabajas en Lepus Ingresa <a href="login.html">Aquí</a></p>
-      </nav>
-    </div>
 
     <!-- LOGO -->
     <nav class="img1">
@@ -44,72 +21,101 @@
 
     <!-- MENU -->
 
-    <%- include('partials/navigation') %>
+    <%- include('partials/navigation.ejs') %>
     
     <!-- HERRAMIENTA INTERACTIVA -->
-  <div class="container">
-    <h2>Autoevaluación de Marketing Digital</h2>
-    <p dir="ltr">Responde las siguientes preguntas para obtener recomendaciones personalizadas</p>
-    <p dir="ltr">Haz clic en "Comenzar" para iniciar la autoevaluación:</p>
+    <div class="container">
+      <h2>Autoevaluación de Marketing Digital</h2>
+      <p dir="ltr">Responde las siguientes preguntas para obtener recomendaciones personalizadas</p>
+      <p dir="ltr" id="instruction">Haz clic en "Comenzar" para iniciar la autoevaluación:</p>
+      
+        <button id="start-button" onclick="showQuestionnaire()">Comenzar</button>
+      
+        <form id="questionnaire" style="display: none;">
+          <!-- Preguntas del cuestionario -->
+          <div class="form-group">
+            <label for="question1" dir="ltr">Pregunta 1: ¿Cuál es tu nivel de experiencia en marketing digital?</label>
+            <select id="question1">
+              <option value="novato" dir="ltr">Novato</option>
+              <option value="intermedio" dir="ltr">Intermedio</option>
+              <option value="avanzado" dir="ltr">Avanzado</option>
+              <option value="experto" dir="ltr">Experto</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="question2" dir="ltr">Pregunta 2: ¿Qué canales de marketing digital utilizas actualmente?</label>
+            <select id="question2">
+          <option value="redes-sociales" dir="ltr">Redes sociales</option>
+          <option value="email-marketing" dir="ltr">Email marketing</option>
+          <option value="busqueda-paga" dir="ltr">Búsqueda paga (SEM)</option>
+          <option value="contenido-blog" dir="ltr">Contenido de blog</option>
+        </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="question3" dir="ltr">Pregunta 3: ¿Cuál es tu objetivo principal con el marketing digital?</label>
+            <select id="question3">
+              <option value="generar-ventas" dir="ltr">Generar ventas</option>
+              <option value="aumentar-visibilidad" dir="ltr">Aumentar visibilidad</option>
+              <option value="construir-marca" dir="ltr">Construir marca</option>
+              <option value="generar-leads" dir="ltr">Generar leads</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="question4" dir="ltr">Pregunta 4: ¿Cuál es tu presupuesto mensual para marketing digital?</label>
+        <select id="question4">
+          <option value="menos-1000" dir="ltr">Menos de $1000</option>
+          <option value="1000-5000" dir="ltr">$1000 - $5000</option>
+          <option value="5000-10000" dir="ltr">$5000 - $10000</option>
+          <option value="mas-10000" dir="ltr">Más de $10000</option>
+        </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="question5" dir="ltr">Pregunta 5: ¿Cuál es tu principal desafío en el marketing digital?</label>
+        <select id="question5">
+          <option value="medir-roi" dir="ltr">Medir ROI</option>
+          <option value="crear-contenido" dir="ltr">Crear contenido relevante</option>
+          <option value="segmentar-audiencia" dir="ltr">Segmentar la audiencia</option>
+          <option value="competencia" dir="ltr">Competir con otros</option>
+        </select>
+          </div>
+          <button type="submit">Generar Informe</button>
+        </form>
 
-    <button id="start-button">Comenzar</button>
+          <!-- Aquí se mostrará el informe generado -->
+        <div id="report">
+        </div>
 
-    <form id="questionnaire">
-      <div class="form-group">
-        <label for="name" dir="ltr">Nombre:</label>
-        <input type="text" dir="ltr" id="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email" dir="ltr">Correo electrónico:</label>
-        <input type="email" dir="ltr" id="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="question1" dir="ltr">Pregunta 1:</label>
-        <input type="text" dir="ltr" id="question1" required>
-      </div>
-
-      <div class="form-group">
-        <label for="question2" dir="ltr">Pregunta 2:</label>
-        <input type="text" dir="ltr" id="question2" required>
-      </div>
-      <button type="submit">Generar Informe</button>
+         <!-- Botón "Generar Reporte" oculto -->
+    <form id="generate-report-form" action="generatePdf" method="post" style="display: none;">
+      <input type="hidden" name="datos" id="report-content">
+      <label for="formato"></label>
+      <button type="submit">
+        Generar Reporte
+      </button>
     </form>
+        
 
-    <div id="report"></div>
-  </div>
+      </div>
 
-  <script src="script.js"></script>
-
-
+      
     <!-- PIE DE PAGINA -->
 
     <footer class="w-100 d-flex align-items justify-content-center d-flex-wrap">
-      <p class="fs-5 px-3 pt-3">
-        LEPUS &copy; Todos los derechos reservados 2023
-      </p>
+      <p class="fs-5 px-3 pt-3">LEPUS &copy; Todos los derechos reservados 2023</p>
       <div id="icons">
-        <a href="#"><i class="bi bi-whatsapp"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=3045441669"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://instagram.com/lepus906?igshid=NjIwNzIyMDk2Mg=="><i class="bi bi-instagram"></i></a>
       </div>
-    </footer>
-  </body>
+  </footer>
+
+  
+
+
 </html>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-  crossorigin="anonymous"
-></script>
+
+

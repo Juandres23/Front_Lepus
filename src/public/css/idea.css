@@ -1,20 +1,4 @@
 /* <!-- HEADER --> */
-/* <!-- Primer nav --> */
-.ingreso{
-    height: 40px;
-    background-color: #008cff;
-    color: #ffffff;
-  }
-  .ingreso p a{
-    font-family: 'Graduate';
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  .ingreso a:hover{
-  color: #00ffff;
-  text-decoration: underline;
-  }
   /* LOGO */
   .brand img {
     display: flex;
@@ -23,24 +7,59 @@
     height: 290px;
   }
   body{
-    background: #4c2882;
+    background: #1f0042;
     color: #00ffff;
     font-family: 'Graduate';
   }
   .img1 {
     text-align: center;
   }
+
+  /* <!-- TIPOS Y PRECIOS --> */
+
+  .campaign-section {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .campaign-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .campaign-section .campaign-item {
+    margin-bottom: 15px;
+  }
+  
+  .campaign-section .campaign-item h3 {
+    margin-bottom: 5px;
+  }
+
+  .campaign-section .campaign-item p {
+    margin-bottom: 5px;
+  }
+  
   
   /* FOOTER */
   
   footer {
     background: #4c2882;
     min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   footer p {
     color: #00ffff;
     text-align: center;
+    margin: 0;
+  }
+
+  #icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #icons i {
@@ -48,14 +67,3 @@
     padding: 0 8px;
     color: #f8f8ff;
   }
-  
-  .brand img {
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    height: 290px;
-  }
-  .img1 {
-    text-align: center;
-  }
-  

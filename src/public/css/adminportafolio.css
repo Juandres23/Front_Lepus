@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  /* Estilos de la sección de portafolio para administrador */
+  .portafolio-admin {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .proyecto {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .proyecto img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .proyecto:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3,
+  .overlay p {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .overlay button {
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el formulario de añadir proyecto */
+  .añadir-proyecto {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .añadir-proyecto h3 {
+    margin-bottom: 10px;
+  }
+  
+  .añadir-proyecto label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .añadir-proyecto input[type="text"],
+  .añadir-proyecto textarea,
+  .añadir-proyecto input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .añadir-proyecto button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

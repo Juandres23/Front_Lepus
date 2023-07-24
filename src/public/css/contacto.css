@@ -1,22 +1,4 @@
 /* <!-- HEADER --> */
-/* <!-- Primer nav --> */
-.ingreso {
-    height: 40px;
-    background-color: #008cff;
-    color: #ffffff;
-  }
-  
-  .ingreso p a {
-    font-family: 'Graduate';
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  
-  .ingreso a:hover {
-    color: #00ffff;
-    text-decoration: underline;
-  }
   
   /* LOGO */
   .brand img {
@@ -26,7 +8,7 @@
     height: 290px;
   }
   body{
-    background: #4c2882;
+    background:#1f0042;
     color: #00ffff;
     font-family: 'Graduate';
   }
@@ -35,24 +17,7 @@
     text-align: center;
   }
   
-  /* FOOTER */
-  
-  footer {
-    background: #4c2882;
-    min-height: 100px;
-  }
-  
-  footer p {
-    color: #00ffff;
-    text-align: center;
-  }
-  
-  #icons i {
-    font-size: 26px;
-    padding: 0 8px;
-    color: #f8f8ff;
-  }
-  
+
   /* <!-- SECCION CONTACTO --> */
   .contacto {
     background: #19003f;
@@ -97,7 +62,7 @@
     border: none;
     margin-bottom: 20px;
     background-color: #00ffff;
-    color: #ff0077;
+    color: #3e005a;
     font-size: 18px;
   }
   
@@ -121,3 +86,32 @@
     background:#5bfaff;
     box-shadow: 0 0 10px #5bfaff, 0 0 40px #5bfaff, 0 0 80px #5bfaff;
   }
+
+  /* FOOTER */
+  
+  footer {
+    background: #4c2882;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer p {
+    color: #00ffff;
+    text-align: center;
+    margin: 0;
+  }
+
+  #icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #icons i {
+    font-size: 26px;
+    padding: 0 8px;
+    color: #f8f8ff;
+  }
+  

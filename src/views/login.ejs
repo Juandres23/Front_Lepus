@@ -2,15 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/login.css" />
-  <link rel="icon" href="img/lepuslogo.jpg" />
-  <title><%= title%></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+  <%- include('partials/login') %>
 </head>
 
 <body>
@@ -29,16 +21,23 @@
             <input type="password" required />
             <label for="">Password</label>
           </div>
+          <div class="inputbox">
+            <ion-icon name="people-outline"></ion-icon>
+            <select required>
+              <option value="">Selecciona tu rol</option>
+              <option value="administrador">Administrador</option>
+              <option value="usuario">Usuario</option>
+              <option value="invitado">Invitado</option>
+            </select>
+          </div>
           <button>Log In</button>
           <div class="register">
-            <p>No tienes una cuenta? <a href="registro.html">Registrate</a></p>
+            <p>No tienes una cuenta? <a href="registro">Registrate</a></p>
           </div>
         </form>
       </div>
     </div>
   </section>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
