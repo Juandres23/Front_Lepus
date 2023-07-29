@@ -1,6 +1,11 @@
 import express from 'express'
 import {dirname, join} from 'path'
 import { fileURLToPath } from 'url'
+import fetch from "node-fetch";
+import jwt from "jsonwebtoken";
+import axios from "axios";
+import PDFDocument from "pdfkit";
+import path from "path";
 
 import indexRoutes from './routes/index.js'
 

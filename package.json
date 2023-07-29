@@ -5,8 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
     "dev": "nodemon src/index.js"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,7 +29,9 @@
     "node-fetch": "^3.3.1",
     "passport": "^0.6.0",
     "path": "^0.12.7",
+    "pdfkit": "^0.13.0",
     "pdfkit-table": "^0.1.99",
+    "socket.io": "^4.7.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

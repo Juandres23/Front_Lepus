@@ -1,31 +1,28 @@
-<!doctype html>
-<html lang="en" dir="rtl">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
-    rel="stylesheet" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
-    crossorigin="anonymous">
+  <!-- Agrega aquí tus etiquetas meta, enlaces a CSS, fuentes, iconos, etc. -->
+
+  <title>Portafolio Administrador</title>
+
   <link rel="stylesheet" href="css/adminportafolio.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="icon" href="img/lepuslogo.jpg">
-  <title><%= title%></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/lepuslogo.jpg" />
 </head>
-<!-- SECCION PORTAFOLIO PARA ADMINISTRADOR -->
-<section id="portafolio-admin" class="portafolio-admin">
+
+<body>
+  <!-- SECCION PORTAFOLIO PARA ADMINISTRADOR -->
+  <section id="portafolio-admin" class="portafolio-admin">
     <div class="contenido-seccion">
       <h2>PORTAFOLIO - Administrador</h2>
       <div class="galeria">
         <!-- Proyectos con opciones adicionales para administradores -->
         <div class="proyecto">
-          <img src="img/ancity.jpg" alt="">
+          <img src="img/lepuslogo.jpg" alt="">
           <div class="overlay">
             <h3>A & N CITY</h3>
             <p>Branding</p>
@@ -37,7 +34,7 @@
         </div>
         <!-- Más proyectos aquí -->
       </div>
-  
+
       <!-- Opción para añadir proyecto -->
       <div class="añadir-proyecto">
         <h3>Añadir Proyecto</h3>
@@ -45,16 +42,22 @@
           <!-- Aquí incluir los campos del formulario para agregar un nuevo proyecto -->
           <label for="nombre">Nombre del Proyecto:</label>
           <input type="text" id="nombre" name="nombre" required>
-  
+
           <label for="descripcion">Descripción:</label>
           <textarea id="descripcion" name="descripcion" required></textarea>
-  
+
           <label for="imagen">Imagen:</label>
           <input type="file" id="imagen" name="imagen" accept="image/*" required>
-  
+
           <button type="submit">Guardar Proyecto</button>
         </form>
       </div>
     </div>
   </section>
-  
+
+  <!-- Agrega aquí otros elementos, secciones, y scripts que necesites -->
+
+  <script src="js/tu-archivo-de-javascript.js"></script>
+</body>
+
+</html>

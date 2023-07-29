@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    background-color: #4a148c; /* Fondo morado oscuro */
+    color: #fff; /* Texto blanco */
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #ff00ff; /* Texto neon rosa */
+  }
+  
+  .fs-5 {
+    color: #00ff00; /* Texto neon verde */
+  }
+  
+  /* Estilos para la lista de mensajes recibidos */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+  }
+  
+  strong {
+    color: #00ffff; /* Texto neon celeste */
+  }
+  
+  /* Estilos para la campana de notificación */
+  .notificacion {
+    background-color: #1a237e; /* Fondo azul oscuro */
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .notificacion i {
+    color: #ff00ff; /* Icono neon rosa */
+    font-size: 2rem;
+  }
+  
+  .notificacion .notificacion-numero {
+    background-color: #00ff00; /* Fondo neon verde */
+    color: #000; /* Texto negro */
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #00ffff; /* Fondo neon celeste */
+    border: none;
+    color: #000; /* Texto negro */
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+  }
+  
+  button a {
+    text-decoration: none;
+    color: #000; /* Texto negro */
+  }
+  
+  button:hover {
+    background-color: #00ff00; /* Fondo neon verde al hacer hover */
+  }
+  
+  /* Estilos para el enlace de términos y condiciones */
+  #termsLink {
+    color: #ff00ff; /* Texto neon rosa */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  #termsLink:hover {
+    color: #00ffff; /* Texto neon celeste al hacer hover */
+  }
+  
