@@ -8,29 +8,28 @@
 <body>
   <section>
     <div class="form-box">
-      <div class="form-value" method="post">
-        <form action="/login">
+      <div class="form-value" >
+        <form action="login" method="POST" >
           <h2>Login</h2>
           <div class="inputbox">
             <ion-icon name="mail-outline"></ion-icon>
-            <input type="email" required />
+            <input type="email" name="email" id="email"required />
             <label for="">Email</label>
           </div>
           <div class="inputbox">
             <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" required />
+            <input type="password"  id="contrasena" name="contrasena" required />
             <label for="">Password</label>
           </div>
           <div class="inputbox">
             <ion-icon name="people-outline"></ion-icon>
-            <select required>
-              <option value="">Selecciona tu rol</option>
-              <option value="administrador">Administrador</option>
-              <option value="usuario">Usuario</option>
-              <option value="invitado">Invitado</option>
+            <select id="userType" name="id_rol" required>
+              <option value="2">Usuario</option>
+              <option value="1">Administrador</option>
+              
             </select>
           </div>
-          <button>Log In</button>
+          <button type="submit">Log In</button>
           <div class="register">
             <p>No tienes una cuenta? <a href="registro">Registrate</a></p>
           </div>
@@ -40,6 +39,33 @@
 
 
   </section>
+  <!-- ... -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- ... -->
+
+<script>
+  $(document).ready(function () {
+    $("form").on("submit", function (event) {
+      event.preventDefault();
+      const formData = $(this).serialize();
+
+      $.post("/login", formData, function (data) {
+        if (data.error) {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: data.error,
+          });
+        } else {
+          if (data.redirect) {
+            window.location.href = data.redirect;
+          }
+        }
+      });
+    });
+  });
+</script>
 </body>
 
 </html>

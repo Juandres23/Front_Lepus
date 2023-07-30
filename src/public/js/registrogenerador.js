@@ -8,7 +8,7 @@ import axios from 'axios';
 export const generatePdf = async (req, res)=> {
   try {
     // Hacemos una petición a la API para obtener la información
-    const response = await axios.get('http://localhost:4000/api');
+    const response = await axios.get(process.env.API+'api');
     const data = response.data[0]; // La información está en el primer elemento del array
 
     // Creamos un nuevo documento PDF

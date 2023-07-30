@@ -17,25 +17,29 @@
 </head>
 
 <body>
-  <section class="form-register">
+  <form action="registrar" method="POST">
+    <section class="form-register">
     <h4>Formulario Registro</h4>
-    <input class="controls" type="id" name="id" id="i" placeholder="Ingrese su Cedula" required/>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su(s) Nombre(s)" required/>
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingresar Apellidos" required/>
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required/>
-    <input class="controls" type="telefono" name="telefono" id="telefono" placeholder="Ingrese su Numero Telefónico" required/>
-    <input class="controls" type="direccion" name="direccion" id="direccion" placeholder="Ingrese su direccion" required/>
-    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required/>
-    <p>Ingrese su fecha de nacimiento:</p>
-    <input class="controls" type="date" name="fecha" id="fecha" required/>
-    <label for="rol">Selecciona tu rol:</label>
-    <select id="rol" name="rol" required>
+    <input class="controls" type="number" name="ID_USUARIO" placeholder="Ingrese su Cedula" required/>
+    <input class="controls" type="text" name="NOMBRE"  placeholder="Ingrese su(s) Nombre(s)" required/>
+    <input class="controls" type="text" name="APELLIDO" placeholder="Ingresar Apellidos" required/>
+    <input class="controls" type="text" name="EMAIL"  placeholder="Ingrese su Correo" required/>
+    <input class="controls" type="number" name="TELEFONO"  placeholder="Ingrese su Numero Telefónico" required/>
+    <input class="controls" type="text" name="DIRECCION"  placeholder="Ingrese su direccion" required/>
+   <label for="rol">Selecciona tu rol:</label>
+  <select name="ID_ROL" required>
         <option value="">Seleccione una opción</option>
-        <option value="administrador">Administrador</option>
-        <option value="usuario">Cliente</option>
-        <option value="invitado">Empresa</option>
+        <option value="2">usuario</option>
     </select>
-
+    
+    <p>Ingrese su fecha de nacimiento:</p>
+    <input class="controls" type="text" name="FECHA_NACIMIENTO"  required/>
+  <input class="controls" type="text" name="CONTRASENA"  placeholder="Ingrese su Contraseña" required/>
+  <label >Selecciona tu GENERO:</label>
+  <select name="GENERO" required>
+        <option value="FEMENINO">FEMENINO</option>
+        <option value="MASCULINO">MASCULINO</option>
+    </select>
     <p>Estoy de acuerdo con <a href="#" id="termsLink">Terminos y condiciones</a></p>
 
     <div id="modal" class="modal">
@@ -51,13 +55,16 @@
       </div>
     </div>
     <br>
-    <a href="login"><button>Registrar</button></a>
-    <form action="generatePdf" method="post">
+    <button type="submit">Registrar</button>
+   
+    </form>
+     <form action="generatePdf" method="post">
       <input type="hidden" name="datos">
       <label for="formato"></label>
       <button type="submit">Generar Reporte en PDF</button></form>
-    </form>
   </section>
+  </form>
+  
 
  
 </body>

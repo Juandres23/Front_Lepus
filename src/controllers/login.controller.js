@@ -12,10 +12,10 @@ const loginUser = async (req, res) => {
   }
 
   try {
-    const response = await axios.get(process.env.API +'usuario');
+    const response = await axios.get(process.env.API +'api');
     const usuarioData = response.data;
     const user = usuarioData[0];
-    const usuario = usuario.find((u) => u.EMAIL === email);
+    const usuario = user.find((u) => u.EMAIL === email);
 
     if (!usuario) {
       return res.json({ error: 'Usuario no encontrado' });
@@ -25,11 +25,11 @@ const loginUser = async (req, res) => {
       return res.json({ error: 'Usuario o contrasena incorrecta' });
     }
 
-    if (usuario.CODIGO_TIPO_USUARIO !== parseInt(tipoUsuario)) {
+    if (usuario.ID_ROL !== parseInt(id_rol)) {
       return res.json({ error: 'No tiene permiso para acceder a este recurso' });
     }
     // Generación del token JWT
-    const token = jwt.sign({ id: user.CODIGO_USUARIO, name: user.NOMBRE, type: user.CODIGO_TIPO_USUARIO }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: user.ID_USUARIO, name: user.NOMBRE, type: user.ID_ROL }, process.env.JWT_SECRET, {
       expiresIn: '24h',
     }); 
 
@@ -37,10 +37,10 @@ const loginUser = async (req, res) => {
     res.cookie('authToken', token, { httpOnly: true, secure: process.env.NODE_ENV !== 'development' });
     console.log('Token JWT:', token); // Agrega esta línea para depurar
     // Redireccionar según el tipo de usuario
-    if (usuario.CODIGO_TIPO_USUARIO === 1) {
-      res.json({ redirect: "/v1/inicio" });
-    } else if (usuario.CODIGO_TIPO_USUARIO === 2) {
-      res.json({ redirect: "/precio" });
+    if (usuario.ID_ROL === 1) {
+      res.json({ redirect: "/" });
+    } else if (usuario.ID_ROL === 2) {
+      res.json({ redirect: "/adminportafolio" });
 
     } else {
       res.status(400).json({ error: 'Tipo de usuario no reconocido' });
@@ -50,7 +50,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-export const logoutUsuario = (req, res) => {
+export const logoutUser = (req, res) => {
   res.clearCookie('authToken');
   res.redirect('/');
 };
@@ -58,4 +58,5 @@ export const logoutUsuario = (req, res) => {
 
 
 
-export { loginUsuario};
+
+export { loginUser};

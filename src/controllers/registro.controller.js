@@ -8,21 +8,24 @@ import axios from "axios";
 
 import fs from "fs"
 
+dotenv.config();
 
-const registro = async (req, res) => {
+const registrar = async (req, res) => {
     const nuevoUsuario = {
-        codigo_tipo_usuario: req.body.CODIGO_TIPO_USUARIO,
-        tipo_documento: req.body.TIPO_DOCUMENTO,
-        documento: req.body.DOCUMENTO,
+        id_usuario: req.body.ID_USUARIO,
         nombre: req.body.NOMBRE,
         apellido: req.body.APELLIDO,
-        correo: req.body.CORREO,
-        clave: req.body.CLAVE,
-        estado: req.body.ESTADO,
-        fecha_creacion: req.body.FECHA_CREACION
+        email: req.body.EMAIL,
+        telefono: req.body.TELEFONO,
+        direccion: req.body.DIRECCION, 
+        id_rol: req.body.ID_ROL, 
+        fecha_nacimiento: req.body.FECHA_NACIMIENTO,
+        contrasena: req.body.CONTRASENA,
+        genero: req.body.GENERO,
+
     };
     console.log('nuevoUsuario', nuevoUsuario);
-    axios.post(process.env.API + 'usuarios', nuevoUsuario)
+    axios.post(process.env.API + 'api', nuevoUsuario)
         .then(response => {
             console.log(response.data);
             // Aquí puedes realizar alguna acción adicional o mostrar un mensaje de éxito.
@@ -36,4 +39,4 @@ const registro = async (req, res) => {
         });
 };
 
-export default registro;
+export default registrar;
