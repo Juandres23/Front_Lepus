@@ -38,9 +38,9 @@ const loginUser = async (req, res) => {
     console.log('Token JWT:', token); // Agrega esta línea para depurar
     // Redireccionar según el tipo de usuario
     if (usuario.ID_ROL === 1) {
-      res.json({ redirect: "/" });
-    } else if (usuario.ID_ROL === 2) {
       res.json({ redirect: "/adminportafolio" });
+    } else if (usuario.ID_ROL === 2) {
+      res.json({ redirect: "/" });
 
     } else {
       res.status(400).json({ error: 'Tipo de usuario no reconocido' });
